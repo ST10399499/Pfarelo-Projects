@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pfarelo Projects</title>
+    <script src="https://kit.fontawesome.com/b2bdf0545a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: yellow;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #333;
+            padding: 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            color: #fff;
+            padding: 16px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #444;
+        }
+        /* Dropdown styles */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background: #444;
+            min-width: 160px;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            flex-direction: column;
+        }
+        nav ul li:hover > ul {
+            display: flex;
+        }
+        nav ul li ul li a {
+            padding: 12px 16px;
+        }
+        .header {
+            font-size: 1.5em;
+            margin: 20px 0 10px 0;
+            color: #333;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            margin-top: 40px;
+        }
+        .social-icons i {
+            margin: 0 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .social-icons i:hover {
+            color: #ffd700;
+        }
+        .content {
+            padding: 20px;
+        }
+        img.logo {
+            display: block;
+            margin: 20px auto 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/logo.png" height="200" width="200" class="logo" alt="Logo">
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">About Us <i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="about us.html">Who We Are</a></li>
+                    <li><a href="how you can help.html">How You Can Help</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services <i class="fa fa-caret-down"></i></a>
+                <ul>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact us.html">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>Pfarelo Projects</h1>
+        <h4>A clean community, A happy community.</h4>
+        <p>
+            Pfarelo Projects was founded in 2019 with the aim of cleaning up communities since there's a lot of littering around our residential areas.<br>
+            Dirty areas cause diseases to small children. Good hygiene is all we are about.
+        </p>
+        <section class="header">MAKE A DIFFERENCE</section>
+        <img src="c:/Users/PRIVATE/Downloads/images.jpeg" height="200" width="200" alt="Make a Difference">
+        <section class="header">HELP THE POOR</section>
+        <img src="images/images.jpg" height="200" width="200" alt="Help the Poor">
+        <br><br>
+        <button onclick="alert('Thank you for your interest in helping!')">Get Involved</button>
+    </div>
+    <footer>
+        <h4>To know more about us</h4>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook-messenger" onclick="window.open('https://m.me/', '_blank')"></i>
+            <i class="fa-brands fa-x-twitter" onclick="window.open('https://twitter.com/', '_blank')"></i>
+        </div>
+        <br>&copy; <span id="year"></span> Pfarelo Projects
+    </footer>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+    
